@@ -1,6 +1,6 @@
 ﻿import {Component} from "../Entities/Entity";
-import {Vector3} from "../Vector3";
-import {Vector2} from "../Vector2";
+import {Vector3} from "../Math/Vector3";
+import {Vector2} from "../Math/Vector2";
 import {EScreenLandmark, ScreenSpace} from "../Utilities/ScreenSpace";
 
 export class PercentPosition extends Component
@@ -59,5 +59,5 @@ export class PercentPosition extends Component
         );
             
     }
-    
+   
 }

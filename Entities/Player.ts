@@ -1,5 +1,5 @@
 import { PlayerMovement } from "../Components/PlayerMovement";
-import { InputSystem } from "../InputSystem";
+import { InputSystem } from "../Utilities/InputSystem";
 import { ImageElement } from "./ImageElement";
 import { Entity } from "./Entity";
 

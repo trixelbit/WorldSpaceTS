@@ -1,5 +1,5 @@
 ﻿import {Component} from "../Entities/Entity";
-import {Vector3} from "../Vector3";
+import {Vector3} from "../Math/Vector3";
 
 export class SlideIn extends Component
 {

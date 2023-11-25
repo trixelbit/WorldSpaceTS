@@ -1,5 +1,5 @@
-import {MathUtils} from './Math';
 import {Vector3} from "./Vector3";
+import {MathUtils} from "./Math";
 
 export class Vector2
 {

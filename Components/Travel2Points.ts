@@ -1,5 +1,5 @@
-import { Vector2 } from '../Vector2';
-import {Vector3} from "../Vector3";
+import { Vector2 } from '../Math/Vector2';
+import {Vector3} from "../Math/Vector3";
 import {Component} from "../Entities/Entity";
 
 export class Travel2Points extends Component

@@ -1,5 +1,5 @@
 import {Component, Entity} from "../Entities/Entity";
-import { Vector2 } from "../Vector2";
+import { Vector2 } from "../Math/Vector2";
 
 export class BoxCollider extends Component
 {

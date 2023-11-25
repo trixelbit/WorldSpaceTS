@@ -1,6 +1,6 @@
 ﻿import {Entity} from "../Entities/Entity";
 import {Oscillate} from "../Components/Oscillate";
-import {Vector3} from "../Vector3";
+import {Vector3} from "../Math/Vector3";
 import {FixedSizeForcer} from "../Components/FixedSizeForcer";
 import {SlideIn} from "../Components/SlideIn";
 

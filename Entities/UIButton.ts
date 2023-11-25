@@ -1,6 +1,6 @@
-﻿import {Vector3} from "../Vector3";
-import {AnchorButton} from "./AnchorButton";
+﻿import {AnchorButton} from "./AnchorButton";
 import {HoverExpand} from "../Components/HoverExpand";
+import {Vector3} from "../Math/Vector3";
 
 export class UIButton extends AnchorButton
 {

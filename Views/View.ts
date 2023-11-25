@@ -1,7 +1,7 @@
-﻿import {Vector3} from "../Vector3";
-import {Vector2} from "../Vector2";
-import {Entity} from "../Entities/Entity";
-import {InputSystem} from "../InputSystem";
+﻿import {Entity} from "../Entities/Entity";
+import {Vector3} from "../Math/Vector3";
+import {Vector2} from "../Math/Vector2";
+import {InputSystem} from "../Utilities/InputSystem";
 
 export abstract class View
 {
@@ -86,5 +86,12 @@ export abstract class View
         
         this._input.ResetReleasedKeys(); 
     }
+    
+    
+}
 
+export enum ESiteMode
+{
+    Play,
+    Edit
 }

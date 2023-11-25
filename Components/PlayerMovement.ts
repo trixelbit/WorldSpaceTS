@@ -1,7 +1,7 @@
 import { Entity, Component } from "../Entities/Entity";
-import { InputSystem } from "../InputSystem";
-import { Vector2 } from "../Vector2";
-import {Vector3} from "../Vector3";
+import {InputSystem} from "../Utilities/InputSystem";
+import {Vector2} from "../Math/Vector2";
+import {Vector3} from "../Math/Vector3";
 
 export class PlayerMovement extends Component
 {

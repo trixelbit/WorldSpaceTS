@@ -1,5 +1,6 @@
 ﻿import {Component} from "../Entities/Entity";
-import {MathUtils} from "../Math";
+import {MathUtils} from "../Math/Math";
+
 
 export class FadeIn extends Component
 {

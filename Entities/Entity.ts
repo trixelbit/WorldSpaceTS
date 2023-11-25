@@ -1,5 +1,5 @@
-import {Vector3} from "../Vector3";
 import {View} from "../Views/View";
+import {Vector3} from "../Math/Vector3";
 
 export interface IComponent
 {

@@ -1,5 +1,5 @@
 ﻿import {View} from "../Views/View";
-import {Vector2} from "../Vector2";
+import {Vector2} from "../Math/Vector2";
 
 export class ScreenSpace
 {
