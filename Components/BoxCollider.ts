@@ -84,9 +84,9 @@ export class BoxCollider extends Component
     return false;
   }
 
-  Start(): void {
+  StartLogic(): void {
   }
 
-  Update(): void {
+  UpdateLogic(): void {
   }
 }

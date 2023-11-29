@@ -12,10 +12,11 @@ export class Vector2
     this.y = y;
   }
 
-  public Add(vector: Vector2)
+  public Add(vector: Vector2) : Vector2
   {
     this.x += vector.x;
     this.y += vector.y;
+    return this.Copy();
   }
 
   public static Add(a: Vector2, b: Vector2) : Vector2
@@ -30,10 +31,11 @@ export class Vector2
   };
 
 
-  public Subtract(vector: Vector2)
+  public Subtract(vector: Vector2) : Vector2
   {
     this.x -= vector.x;
     this.y -= vector.y;
+    return this.Copy();
   }
 
   public static Subtract(a: Vector2, b: Vector2): Vector2
@@ -117,6 +119,17 @@ export class Vector2
       throw new Error("{name} is null");
     }
   }
-};
+  
+  public ToString() : string
+  {
+    if(this === undefined)
+    {
+      return "undefined";
+    }
+    
+    return `(${this.x}, ${this.y})`;
+  }
+  
+}
 
 

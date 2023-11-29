@@ -2,17 +2,12 @@
 import {Vector3} from "../Math/Vector3";
 import {Vector2} from "../Math/Vector2";
 import {InputSystem} from "../Utilities/InputSystem";
+import {Camera} from "../Services/Camera";
 
 export abstract class View
 {
     public static Instance: View;
   
-    public CameraPosition: Vector3 = Vector3.Zero();
-    
-    public CameraTarget: Vector3 = Vector3.Zero();
-
-    public CameraCenterPoint: Vector2 = Vector2.Zero();
-    
     public static get ElapsedTime() : number
     {
         return View._elapsedTime;
@@ -73,15 +68,22 @@ export abstract class View
     {
         for(const entity of this._entities)
         {
-            entity.Update();
+            Camera.Update();
+            try
+            {
+                entity.Update();
+            }
+            catch(e)
+            {
+                console.error(e);
+            }
         }
 
         for(const entity of this._entities)
         {
-            entity.ApplyCameraPositionToElement(this.CameraPosition);
+            entity.ApplyCameraPositionToElement(Camera.WorldPosition);
         }
 
-        this.CameraPosition = Vector3.Lerp(this.CameraPosition, this.CameraTarget, 0.05);
         View._elapsedTime = View._elapsedTime + 0.05;
         
         this._input.ResetReleasedKeys(); 

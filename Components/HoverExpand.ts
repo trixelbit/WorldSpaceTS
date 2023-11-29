@@ -24,12 +24,12 @@ export class HoverExpand extends Component
         imageElement.onmouseleave = (e) => this.OnMouseLeave(e);
     }
     
-    Start(): void 
+    StartLogic(): void 
     {
         
     }
     
-    public override Update()
+    public override UpdateLogic()
     {
         this._currentScale = MathUtils.Lerp(this._currentScale, this._targetScale, this.StretchSpeed);
         this._entity.Element.style.scale = this._currentScale.toString();

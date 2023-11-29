@@ -139,6 +139,23 @@ export class Vector3
             throw new Error("{name} is null");
         }
     }
-};
+    
+    public ToString(): string
+    {
+        if(this === undefined)
+        {
+            return "undefined";
+        }
+        
+        return `(${this.x}, ${this.y}, ${this.z})`;
+    }
+    
+    public To2D() : Vector2
+    {
+        return new Vector2(this.x, this.y);
+    }
+        
+    
+}
 
 

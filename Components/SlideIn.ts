@@ -19,14 +19,14 @@ export class SlideIn extends Component
         this._offset = offset;
     }
     
-    public override Start()
+    public override StartLogic()
     {
         this._target = this._entity.WorldPosition;
         this._startPoint = Vector3.Add(this._entity.WorldPosition, this._offset);
         this._entity.WorldPosition = this._startPoint;
     }
     
-    public override Update()
+    public override UpdateLogic()
     {
         this._entity.WorldPosition = Vector3.Lerp(this._entity.WorldPosition, this._target, this._lerpSpeed);
     }

@@ -2,12 +2,12 @@
 
 export class FixedSizeForcer extends Component
 {
-    Start() : void
+    StartLogic() : void
     {
         
     }
 
-    Update() : void 
+    UpdateLogic() : void 
     {
         this._entity.Scale = ( (-this._entity.WorldPosition.z - 1) / 100) + 1;
     }

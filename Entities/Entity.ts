@@ -1,11 +1,16 @@
 import {View} from "../Views/View";
 import {Vector3} from "../Math/Vector3";
+import {Option} from "../Utilities/Option";
 
 export interface IComponent
 {
     Start(): void;
-
+    
     Update(): void;
+  
+    StartLogic(): void;
+
+    UpdateLogic(): void;
     
     SetEntity(entity: Entity): void;
 }
@@ -13,19 +18,43 @@ export interface IComponent
 export abstract class Component implements IComponent
 {
   protected _entity : Entity;
+  
+  protected _isAttached : boolean = false;
 
   public get Entity() : Entity
   {
     return this._entity;
   }
+  
 
-  public abstract Start(): void;
+  public abstract StartLogic(): void;
 
-  public abstract Update(): void;
+  public abstract UpdateLogic(): void;
 
   public SetEntity(entity: Entity): void 
   {
     this._entity = entity;
+    this._isAttached = true;
+  }
+
+  Start(): void 
+  {
+    if(!this._isAttached)
+    {
+      return;
+    }
+    
+    this.StartLogic();
+  }
+
+  Update(): void 
+  {
+    if(!this._isAttached)
+    {
+      return;
+    }
+    
+    this.UpdateLogic();
   }
 }
 
@@ -101,6 +130,19 @@ export class Entity
   {
     component.SetEntity(this);
     this._components.push(component);
+  }
+  
+  public GetComponent<T extends Component>() : Option<T>
+  {
+    for(const component of this._components)
+    {
+      if(component as T !== undefined)
+      {
+        return Option.Some(component as T);
+      }
+    }
+    
+    return Option.None();
   }
 
   public Start(): void

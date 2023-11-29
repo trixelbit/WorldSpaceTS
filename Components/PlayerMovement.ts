@@ -26,7 +26,7 @@ export class PlayerMovement extends Component
   }
 
 
-  public Update(): void 
+  public UpdateLogic(): void 
   {
     this._input = this.ProcessInput();
     this._velocity = Vector2.Scale(this._input, this._maxSpeed);
@@ -71,7 +71,7 @@ export class PlayerMovement extends Component
     return Vector2.Normalized(new Vector2(x, y));
   }
 
-  Start(): void {
+  StartLogic(): void {
   }
 }
 

@@ -28,11 +28,11 @@ export class Travel2Points extends Component
     this._endPoint = endPoint;
   }
   
-  public override Start()
+  public override StartLogic()
   {
   }
 
-  public override Update()
+  public override UpdateLogic()
   {
     this._entity.WorldPosition = Vector3.Add(this._entity.WorldPosition, this._scrollSpeed);
 

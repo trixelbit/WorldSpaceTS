@@ -13,12 +13,12 @@ export class FadeIn extends Component
         this._fadePercent = fadePercent;
     }
     
-    public override Start()
+    public override StartLogic()
     {
         this._entity.Element.style.opacity = "0";
     }
     
-    public override Update()
+    public override UpdateLogic()
     {
         this._opacity = MathUtils.Lerp(this._opacity, 1, this._fadePercent);
         this._entity.Element.style.opacity = this._opacity.toString();

@@ -30,7 +30,7 @@ export class WiggleText
             span.Element.style.position = "relative";
             span.AddComponent(new Oscillate(new Vector3(0, amplitude, 0), 0.5, offset));
             span.AddComponent(new FixedSizeForcer());
-            
+    
             if(character === " ")
             {
                 span.Element.textContent = "\u00A0";

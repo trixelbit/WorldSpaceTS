@@ -22,13 +22,13 @@ export class PercentPosition extends Component
         this._margin = margin;
     }
     
-    Start(): void 
+    StartLogic(): void 
     {
         this.Entity.Element.style.width = ScreenSpace.PercentToPixelWidth(this.Percent) + "px";
         this.Entity.Element.style.height = ScreenSpace.PercentToPixelWidth(this.Percent) + "px";
     }
 
-    Update(): void 
+    UpdateLogic(): void 
     {
         //this._entity.WorldPosition = this.CalculatePosition();
         const position = this.CalculatePosition();

@@ -69,6 +69,11 @@ export class ScreenSpace
         return new Vector2(this.HalfWidth, this.HalfHeight);
     }
     
+    public static get QuadrantSize() : Vector2
+    {
+        return new Vector2(this.HalfWidth, this.HalfHeight);
+    }
+    
     public static LandMarkToVector2(landmark : EScreenLandmark) : Vector2
     {
         switch(landmark)

@@ -22,12 +22,12 @@ export class Oscillate extends Component
         this.Offset = offset;
     }
     
-    public override Start()
+    public override StartLogic()
     {
         this._initialPosition = this._entity.WorldPosition;
     }
     
-    public override Update()
+    public override UpdateLogic()
     {
         this._entity.WorldPosition = 
             new Vector3
